@@ -1,36 +1,22 @@
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
 
-//
-//  Hello World client in C++
-//  Connects REQ socket to tcp://localhost:5555
-//  Sends "Hello" to server, expects "World" back
-//
-#include <zmq.hpp>
-#include <string>
-#include <iostream>
-
-int main ()
+int main(int argc, char *argv[])
 {
-    //  Prepare our context and socket
-    zmq::context_t context (1);
-    zmq::socket_t socket (context, ZMQ_REQ);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+#endif
 
-    std::cout << "Connecting to hello world server..." << std::endl;
-    socket.connect ("tcp://localhost:5555");
+    QGuiApplication app(argc, argv);
 
-    //  Do 10 requests, waiting each time for a response
-    for (int request_nbr = 0; request_nbr != 10; request_nbr++) {
-        zmq::message_t request (5);
-        memcpy (request.data (), "Hello", 5);
-        std::cout << "Sending Hello " << request_nbr << "..." << std::endl;
-        socket.send (request);
+    QQmlApplicationEngine engine;
+    const QUrl url(QStringLiteral("qrc:/main.qml"));
+    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
+                     &app, [url](QObject *obj, const QUrl &objUrl) {
+        if (!obj && url == objUrl)
+            QCoreApplication::exit(-1);
+    }, Qt::QueuedConnection);
+    engine.load(url);
 
-        //  Get the reply.
-        zmq::message_t reply;
-        socket.recv (&reply);
-
-        std::string rpl = std::string(static_cast<char*>(reply.data()), reply.size());
-        
-        std::cout << "Reply: " << rpl << std::endl;
-    }
-    return 0;
+    return app.exec();
 }
