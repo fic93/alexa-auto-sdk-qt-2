@@ -1,5 +1,34 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>assets/ac.png</file>
+        <file>ClimateScreen.qml</file>
+        <file>assets/uparrow.png</file>
+        <file>assets/person.png</file>
+        <file>assets/heating.png</file>
+        <file>assets/fan.png</file>
+        <file>assets/arrows.png</file>
+        <file>assets/arrow.png</file>
+        <file>assets/ac-rear.png</file>
+        <file>assets/ac.svg</file>
+        <file>PhoneScreen.qml</file>
+        <file>assets/phone.png</file>
+        <file>assets/bluetoothoff.png</file>
+        <file>assets/alexa.png</file>
+        <file>assets/microphone.png</file>
+        <file>assets/music.png</file>
+        <file>assets/wifi.png</file>
+        <file>assets/signal.png</file>
+        <file>AlexaHome.qml</file>
+        <file>MediaScreen.qml</file>
+        <file>assets/stop.png</file>
+        <file>assets/prev.svg</file>
+        <file>assets/prev.png.crdownload</file>
+        <file>assets/play.png</file>
+        <file>assets/pause.png</file>
+        <file>assets/next.svg</file>
+        <file>assets/next.png.crdownload</file>
+        <file>assets/next.png</file>
+        <file>assets/cover.png</file>
     </qresource>
 </RCC>
