@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.5
 import QtQuick.Controls.Material 2.12
+import QtLocation 5.15
 
 Window {
     width: 720
@@ -67,10 +68,7 @@ AlexaHome{}
             PhoneScreen{}
         }
         Item {
-            Text {
-                id: navigation
-                text: qsTr("Navigation")
-            }
+            NavigationScreen{}
         }
         Item {
             Text {

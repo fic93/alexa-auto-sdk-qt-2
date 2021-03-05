@@ -23,12 +23,14 @@
         <file>MediaScreen.qml</file>
         <file>assets/stop.png</file>
         <file>assets/prev.svg</file>
-        <file>assets/prev.png.crdownload</file>
         <file>assets/play.png</file>
         <file>assets/pause.png</file>
         <file>assets/next.svg</file>
-        <file>assets/next.png.crdownload</file>
         <file>assets/next.png</file>
         <file>assets/cover.png</file>
+        <file>NavigationScreen.qml</file>
+        <file>assets/speakeroff.png</file>
+        <file>assets/speaker.png</file>
+        <file>assets/movie.mp4</file>
     </qresource>
 </RCC>

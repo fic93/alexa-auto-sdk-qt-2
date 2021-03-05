@@ -14,10 +14,6 @@ Item {
         width: 359
         height: 400
         color: "#d9d9d9"
-        MediaPlayer {
-            id: mediaplayer
-            source: "groovy_video.mp4"
-        }
 
             Image {
                 id: image
@@ -67,6 +63,31 @@ Item {
             }
 
 
+    }
+
+    Rectangle {
+        id: rectangle1
+        x: 373
+        y: 34
+        width: 339
+        height: 400
+        color: "#d9d9d9"
+
+        MediaPlayer {
+                id: mediaplayer
+                source: "assets/movie.mp4"
+            }
+
+            VideoOutput {
+                anchors.fill: parent
+                source: mediaplayer
+            }
+
+            MouseArea {
+                id: playArea
+                anchors.fill: parent
+                onPressed: mediaplayer.play();
+            }
     }
 
 }
