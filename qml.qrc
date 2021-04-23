@@ -32,5 +32,6 @@
         <file>assets/speakeroff.png</file>
         <file>assets/speaker.png</file>
         <file>assets/movie.mp4</file>
+        <file>Settings.qml</file>
     </qresource>
 </RCC>

@@ -13,7 +13,23 @@ Item {
         y: 34
         width: 704
         height: 400
-        color: "#d9d9d9"
+        color: "#3d4e81"
+        gradient: Gradient {
+            GradientStop {
+                position: 0
+                color: "#3d4e81"
+            }
+
+            GradientStop {
+                position: 0.48
+                color: "#5753c9"
+            }
+
+            GradientStop {
+                position: 1
+                color: "#6e7ff3"
+            }
+        }
         Plugin {
                 id: mapPlugin
                 name: "osm" // "mapboxgl", "esri", ...
@@ -41,6 +57,7 @@ Item {
                 y: 113
                 width: 100
                 height: 82
+                highlighted: true
                 icon.source: "assets/speakeroff.png"
             }
 
@@ -50,6 +67,7 @@ Item {
                 y: 201
                 width: 100
                 height: 82
+                highlighted: true
                 icon.source: "assets/speaker.png"
             }
     }

@@ -12,7 +12,23 @@ Item {
         y: 31
         width: 359
         height: 400
-        color: "#d9d9d9"
+        color: "#434343"
+        gradient: Gradient {
+            GradientStop {
+                position: 0
+                color: "#3d4e81"
+            }
+
+            GradientStop {
+                position: 0.48
+                color: "#5753c9"
+            }
+
+            GradientStop {
+                position: 1
+                color: "#6e7ff3"
+            }
+        }
 
 
         Button {
@@ -22,6 +38,7 @@ Item {
             width: 62
             height: 40
             opacity: 1
+            highlighted: true
             icon.source: "assets/ac.png"
         }
 
@@ -31,6 +48,7 @@ Item {
             y: 60
             width: 62
             height: 40
+            highlighted: true
             icon.source: "assets/ac-rear.png"
         }
 
@@ -40,6 +58,7 @@ Item {
             y: 106
             width: 62
             height: 40
+            highlighted: true
             icon.source: "assets/ac.svg"
         }
 
@@ -47,6 +66,7 @@ Item {
             id: fan1
             x: 63
             y: 354
+            highlighted: true
             icon.source: "assets/fan.png"
         }
 
@@ -54,6 +74,7 @@ Item {
             id: fan2
             x: 109
             y: 354
+            highlighted: true
             icon.source: "assets/fan.png"
         }
 
@@ -61,6 +82,7 @@ Item {
             id: fan3
             x: 155
             y: 354
+            highlighted: true
             icon.source: "assets/fan.png"
         }
 
@@ -78,6 +100,7 @@ Item {
             id: fan4
             x: 201
             y: 354
+            highlighted: true
             icon.source: "assets/fan.png"
         }
 
@@ -85,6 +108,7 @@ Item {
             id: fan5
             x: 247
             y: 354
+            highlighted: true
             icon.source: "assets/fan.png"
         }
 
@@ -97,6 +121,9 @@ Item {
             y: 63
             width: 70
             height: 70
+            autoRepeat: false
+            highlighted: true
+            flat: false
             icon.source: "assets/arrow.png"
         }
 
@@ -106,6 +133,7 @@ Item {
             y: 207
             width: 70
             height: 70
+            highlighted: true
             icon.source: "assets/arrow.png"
         }
 
@@ -117,7 +145,22 @@ Item {
         y: 31
         width: 332
         height: 400
-        color: "#d9d9d9"
+        gradient: Gradient {
+            GradientStop {
+                position: 0
+                color: "#3d4e81"
+            }
+
+            GradientStop {
+                position: 0.48
+                color: "#5753c9"
+            }
+
+            GradientStop {
+                position: 1
+                color: "#6e7ff3"
+            }
+        }
 
         Image {
             id: image1
@@ -149,6 +192,7 @@ Item {
             id: roundButton2
             x: 48
             y: 310
+            highlighted: true
             icon.source: "assets/uparrow.png"
         }
 
@@ -156,6 +200,7 @@ Item {
             id: roundButton3
             x: 245
             y: 308
+            highlighted: true
             rotation: -180
             icon.source: "assets/uparrow.png"
         }
@@ -189,6 +234,7 @@ Item {
             x: 27
             y: 180
             text: qsTr("Driver")
+            highlighted: true
             Material.accent: Material.Orange
         }
 
@@ -197,6 +243,7 @@ Item {
             x: 195
             y: 180
             text: qsTr("Passenger")
+            highlighted: true
         }
     }
 

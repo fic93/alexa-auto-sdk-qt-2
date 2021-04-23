@@ -13,7 +13,22 @@ Item {
         y: 34
         width: 359
         height: 400
-        color: "#d9d9d9"
+        gradient: Gradient {
+            GradientStop {
+                position: 0
+                color: "#3d4e81"
+            }
+
+            GradientStop {
+                position: 0.48
+                color: "#5753c9"
+            }
+
+            GradientStop {
+                position: 1
+                color: "#6e7ff3"
+            }
+        }
 
             Image {
                 id: image
@@ -38,6 +53,7 @@ Item {
                 id: roundButton1
                 x: 98
                 y: 316
+                highlighted: false
                 icon.source: "assets/prev.svg"
             }
 
@@ -45,6 +61,7 @@ Item {
                 id: roundButton2
                 x: 160
                 y: 316
+                highlighted: false
                 icon.source: "assets/play.png"
             }
 
@@ -52,6 +69,7 @@ Item {
                 id: roundButton3
                 x: 222
                 y: 316
+                highlighted: false
                 icon.source: "assets/next.svg"
             }
 
